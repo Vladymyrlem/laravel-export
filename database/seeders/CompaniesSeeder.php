@@ -41,9 +41,9 @@ class CompaniesSeeder extends Seeder
         while (($data = $mydata) !== false) {
 
             if (!$transRow) {
-                foreach ($data as   $value) {
+//                foreach ($data as   $value) {
                     Companies::create([
-                        'title_company' => $data->title_company,
+                        'title_company' => $data['0'],
                         'content' => $data['1'],
                         'company_category' => $data['2'],
                         'thumbnail' => $data['3'],
@@ -71,7 +71,7 @@ class CompaniesSeeder extends Seeder
                         'social_links_social_link' => $data['25'],
                         'social_links_social_lists' => $data['26'],
                     ]);
-                }
+               // }
             }
             $transRow = false;
             if (is_resource($csvData)) {
