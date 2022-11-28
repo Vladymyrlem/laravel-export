@@ -124,6 +124,11 @@
 
                     <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+{{--                        @dd($import['item'])--}}
+{{--                        @foreach($import->item as $note) {--}}
+{{--                        {{$note[0]}}--}}
+{{--                        @endforeach--}}
+                        @dd($count)
                     </div>
                 </div>
             </div>

@@ -12,7 +12,7 @@ class Companies extends Model
         'id',
         'title_company',
         'content',
-        'company category',
+        'company_category',
         'thumbnail',
         'adr_title',
         'adr_url',
@@ -36,6 +36,8 @@ class Companies extends Model
         'connectivity_options_comment-to-option',
         'links_link',
         'social_links_social_link',
-        'social_links_social_lists'
+        'social_links_social_lists',
+        'created_at',
+        'updated_at'
     ];
 }

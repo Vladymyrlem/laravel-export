@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ExportController;
+use \App\Http\Controllers\CompaniesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ExportController::class, 'import'])->name('home');
+Route::get('/open', [ExportController::class, 'index']);
+Route::get('/import', [ExportController::class, 'importcsv']);
+Route::get('file-import-export', [ExportController::class, 'fileImportExport']);
+Route::post('file-import', [ExportController::class, 'fileImport'])->name('file-import');
+Route::get('file-export', [ExportController::class, 'fileExport'])->name('file-export');
+Route::get('/companies', [CompaniesController::class, 'index'])->name('companies');
